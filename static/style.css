@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f1e8;
+  color: #252525;
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #efe2c2, #f9f7f1);
+}
+.card, .panel {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.12);
+}
+.card {
+  width: min(720px, 92%);
+  padding: 34px;
+}
+.container {
+  width: min(1000px, 92%);
+  margin: 40px auto;
+}
+h1 { text-align: center; margin-bottom: 8px; }
+.subtitle { text-align: center; color: #666; margin-bottom: 28px; }
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 7px;
+  font-weight: 700;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d5d5d5;
+  border-radius: 10px;
+  font-size: 15px;
+}
+textarea { min-height: 130px; resize: vertical; }
+button, .button {
+  display: inline-block;
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 18px;
+  margin-top: 24px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+button { width: 100%; font-size: 16px; }
+.panel {
+  padding: 22px;
+  margin: 28px 0;
+}
+.panel img {
+  display: block;
+  width: min(100%, 720px);
+  margin: 16px auto;
+  border-radius: 10px;
+}
+.scene { color: #555; }
+details {
+  margin-top: 14px;
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 8px;
+}
+.actions { text-align: center; margin: 30px 0 60px; }
+.secondary { background: #777; margin-left: 8px; }
+.success { text-align: center; margin: 15vh auto; }
+@media (max-width: 700px) {
+  .secondary { display: block; margin: 10px 0 0; }
+}

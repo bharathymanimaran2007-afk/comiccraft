@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComicCraft - Preview</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Your Comic Preview</h1>
+
+    {% for panel in layout %}
+    <section class="panel">
+      <h2>Panel {{ panel.panel_number }}: {{ panel.title }}</h2>
+      <img src="{{ panel.image_path }}" alt="Comic panel {{ panel.panel_number }}">
+      <p class="scene"><em>{{ panel.scene_description }}</em></p>
+      <p><strong>Caption:</strong> {{ panel.caption }}</p>
+      <p><strong>Narration:</strong> {{ panel.narration }}</p>
+      <details>
+        <summary>Image Prompt Reference</summary>
+        <p>{{ panel.image_prompt }}</p>
+      </details>
+    </section>
+    {% endfor %}
+
+    <div class="actions">
+      <a class="button" href="{{ pdf_path }}" download>Download Your Comic as PDF</a>
+      <a class="button secondary" href="/export-success">Export Success Page</a>
+      <a class="button secondary" href="/">Create Another Comic</a>
+    </div>
+  </main>
+</body>
+</html>

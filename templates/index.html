@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComicCraft - Create Your Comic</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="hero">
+  <main class="card">
+    <h1>ComicCraft</h1>
+    <p class="subtitle">AI Comic Story Creator using Gemini Models</p>
+
+    <form action="/generate" method="post">
+      <label>Story Prompt</label>
+      <textarea name="story_prompt" placeholder="A brave fox exploring an enchanted forest..." required></textarea>
+
+      <label>Main Character Name</label>
+      <input name="character_name" placeholder="Foxy" required>
+
+      <label>Setting</label>
+      <select name="setting" required>
+        <option>school</option>
+        <option>forest</option>
+        <option>space</option>
+        <option>city</option>
+      </select>
+
+      <label>Story Tone</label>
+      <select name="tone" required>
+        <option>light-hearted</option>
+        <option>dramatic</option>
+        <option>poetic</option>
+        <option>funny</option>
+      </select>
+
+      <label>Art Style</label>
+      <select name="art_style" required>
+        <option>anime</option>
+        <option>pixel art</option>
+        <option>comic book</option>
+        <option>realistic</option>
+      </select>
+
+      <button type="submit">Generate My Comic</button>
+    </form>
+  </main>
+</body>
+</html>
